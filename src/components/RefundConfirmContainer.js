@@ -35,9 +35,8 @@ class RefundConfirmContainer extends Component {
         refundAmount: refundAmountPlusVAT.toFixed(2)
       });
     } else if (
-      this.state.confirmRefund === "no" ||
-      this.state.confirmRefund === "" ||
-      this.state.confirmRefund === ""
+      (this.state.confirmRefund === "no") ||
+      (this.state.confirmRefund === "")
     )
       this.props.updateInvoiceDetail({
         percentageRefund: 0,
